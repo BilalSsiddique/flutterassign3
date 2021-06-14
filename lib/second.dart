@@ -40,7 +40,7 @@ class Home extends StatelessWidget {
                     height: 8,
                   ),
                   Align(
-                      alignment: Alignment.centerLeft, child: Text("History")),
+                      alignment: Alignment(-0.92,0.22), child: Text("History")),
                   res("assets/iphone12.png", "\$10", "Iphone 12"),
                   res("assets/samsung.png", "\$10", "Note 20 Ultra"),
                   res("assets/macbook.png", "\$10", "Macbook Air"),
@@ -81,12 +81,10 @@ Widget res(a, b, c) {
     subtitle: Row(
       children: [
 
-        IconButton(
-          icon: Icon(
-            Icons.star,
-            color: Colors.yellow[700],
-            size: 15,
-          ),
+         Icon(
+              Icons.star,
+              color: Colors.yellow[500],
+              size: 15,
         ),
         Text("5.0 (23 Reviews)"),
 

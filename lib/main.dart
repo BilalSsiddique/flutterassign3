@@ -29,39 +29,43 @@ class MyHome extends StatelessWidget {
               icon: Icon(
                 Icons.notifications,
                 color: Colors.black,
-              ),
+              )
             )
           ]),
       body: SingleChildScrollView(
+      
         child: Column(
+          
+          
           children: [
+            
             screen2(
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfoCgclyo_OM_5kz-0M0ZFP39n3ZHcHivyaQ&usqp=CAU',
-                "Iphone 12"),
+                "Iphone 12",context),
             screen2(
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfoCgclyo_OM_5kz-0M0ZFP39n3ZHcHivyaQ&usqp=CAU',
-                "Note 20 Ultra"),
+                "Note 20 Ultra",context),
             screen2(
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfoCgclyo_OM_5kz-0M0ZFP39n3ZHcHivyaQ&usqp=CAU',
-                "Macbook Air"),
+                "Macbook Air",context),
             screen2(
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfoCgclyo_OM_5kz-0M0ZFP39n3ZHcHivyaQ&usqp=CAU',
-                "Macbook Pro"),
+                "Macbook Pro",context),
             screen2(
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfoCgclyo_OM_5kz-0M0ZFP39n3ZHcHivyaQ&usqp=CAU',
-                "Gaming Pc"),
+                "Gaming Pc",context),
             screen2(
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfoCgclyo_OM_5kz-0M0ZFP39n3ZHcHivyaQ&usqp=CAU',
-                "Backlit Keyboard"),
+                "Backlit Keyboard",context),
             screen2(
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfoCgclyo_OM_5kz-0M0ZFP39n3ZHcHivyaQ&usqp=CAU',
-                "Mercedes"),
+                "Mercedes",context),
             screen2(
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfoCgclyo_OM_5kz-0M0ZFP39n3ZHcHivyaQ&usqp=CAU',
-                "Mutton"),
+                "Mutton",context),
             screen2(
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfoCgclyo_OM_5kz-0M0ZFP39n3ZHcHivyaQ&usqp=CAU',
-                "Roadster"),
+                "Roadster",context),
             ElevatedButton(
                 onPressed: () {
                   Navigator.push(
@@ -77,11 +81,11 @@ class MyHome extends StatelessWidget {
 
 String d;
 String e;
-Widget screen2(d, e) {
+Widget screen2(d, e,context) {
   return (Container(
-    height: 115,
-    width: 500,
-    margin: EdgeInsets.all(10.0),
+    // width:MediaQuery.of(context).size.width*0.9,
+    // height:MediaQuery.of(context).size.height*0.9,
+    margin: EdgeInsets.symmetric(vertical: 10.0,horizontal:2.0),
     child: Card(
         clipBehavior: Clip.antiAliasWithSaveLayer,
         shape:
@@ -89,10 +93,16 @@ Widget screen2(d, e) {
         semanticContainer: true,
         elevation: 0.5,
         child: Row(children: [
-          Image.network(
-            d,
-            fit: BoxFit.fill,
-          ),
+          
+            
+              Expanded(
+                              child: Image.network(
+                  d,
+                  fit: BoxFit.fill,
+                ),
+              ),
+            
+          
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: Column(
